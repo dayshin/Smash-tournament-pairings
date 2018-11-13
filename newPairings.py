@@ -1,7 +1,7 @@
 # Instantiate array of winners and losers
 winners = []
 losers = []
-
+ranking = []
 # find out when there is one winner and one loser
 
 
@@ -10,6 +10,9 @@ def placeInitialBrackets():
     # 0 vs 5, 1-4, 2-3 we go up to len(numPlayers) (6)/2 - 1
     n = 0
     #     0, 1, 2         3
+    # if an odd num of players, add a 'bye'
+    if(len(numPlayers) % 2 == 1):
+        numPlayers.append('bye')
     while(n < len(numPlayers)/2):
         # 0, 1, 2 and 5, 4, 3
         placeBrackets(numPlayers[n],
@@ -34,8 +37,10 @@ def placeLosers(a, b):
                         " or " + b + "?")
     if( finalWinner == a ):
         losers.remove(b)
+        ranking.append(b)
     else:
         losers.remove(a)
+        ranking.append(a)
     print(winners)
     print(" are in the winners' bracket")
     print(losers)
@@ -84,8 +89,17 @@ while("true"):
     print(str(len(losers)) + " losers")
     if(len(winners) == 1 and len(losers) == 1):
         # call fight, ask for winner
-        finalWinner = input("Who won?")
+        finalWinner = input("Final round: Who won? " + winners[0]
+                            + " or " + losers[0] + "?")
         print (finalWinner + " wins!")
+        if(finalWinner == winners[0]):
+            ranking.append(losers[0])
+            ranking.append(winners[0])
+        if(finalWinner == losers[0]):
+            ranking.append(winners[0])
+            ranking.append(losers[0])
+        print("Rankings... ")
+        print(ranking[::-1])
         break;
         # if one winner, but many losers, then losers must play
         # also assuming even losers
