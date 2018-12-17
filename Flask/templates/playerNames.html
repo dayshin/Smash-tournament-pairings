@@ -1,0 +1,24 @@
+<!doctype html>
+<title>Pairings</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
+<div class=page>
+  <h1>What are the names? </h1>
+
+  <div class=metanav>
+
+<h4>
+<form id='setNames' method='post' action='processNames' > <!-- action must match your next URL -->
+   <p>
+     {% for i in range(1,num + 1) %}
+        Player {{i}}: <input type='text' name=names/> <br/>
+     {% endfor %}
+   </p>
+
+   <p>
+   <input type='submit' value='Begin Pairings' /> <!--the 'value' is the word that will appear on your button.-->
+   </p>
+</form>
+</h4>
+
+</div>
+</div>

@@ -1,0 +1,23 @@
+<!doctype html>
+<title>Pairings</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
+<div class=page>
+  <h1> Who wins?  </h1>
+
+  <div class=metanav>
+
+<h4>
+<form id='answerform_lulu' method='post' action={{brack}}> <!-- action must match your next URL -->
+   <p>
+     Player {{ player1 }} vs Player {{ player2 }} <br> <br> Who won? <br><br>
+        Player {{player1}} <input type='radio' name=1/> <br/>
+        Player {{player2}} <input type = 'radio' name = 2 /> <br/>
+   </p>
+   <p>
+   <input type='submit' value='Next round!' /> <!--the 'value' is the word that will appear on your button.-->
+   </p>
+</form>
+</h4>
+
+</div>
+</div>
