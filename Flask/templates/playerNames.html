@@ -7,10 +7,10 @@
   <div class=metanav>
 
 <h4>
-<form id='setNames' method='post' action='processNames' > <!-- action must match your next URL -->
+<form id='setNames' method='post' action='/processNames' > <!-- action must match your next URL -->
    <p>
      {% for i in range(1,num + 1) %}
-        Player {{i}}: <input type='text' name=names/> <br/>
+        Player {{i}}: <input type='text' name="names[]"/> <br/>
      {% endfor %}
    </p>
 
