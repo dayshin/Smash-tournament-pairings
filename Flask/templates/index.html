@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css?q=123') }}"> -->
+    <link rel="stylesheet" href="/static/css/styles.css?q=version-1.0.0"
+       type="text/css" media="screen" charset="utf-8" />
+    <title> tournament start! </title>
   </head>
   <body>
-    <script src="script.js"></script>
+
 
     <form method='post' action='index'>
-      How many players?
+      <h1>How many players?</h1>
       <input type="number" name="numPlayers" min = 2 max= 14<br><br>
-      <input type="submit" value="Submit"><br><br>
     </form>
+    <div id="react"></div>
+
+
+      <div id="root"></div>
+
+      <!-- Load our React component. -->
+      <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='like_button.js') }}"></script>
+
+
+      <!-- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> -->
 
   </body>
 </html>

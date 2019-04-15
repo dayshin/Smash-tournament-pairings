@@ -1,7 +1,11 @@
 from flask import Flask,render_template,request,redirect
+import os
 app = Flask(__name__)
 app.vars = {}
 
+app.config["CACHE_TYPE"] = "null"
+
+@app.route('/', methods = ['GET', 'POST'])
 @app.route('/index', methods = ['GET', 'POST'])
 def index():
     if request.method == 'GET':

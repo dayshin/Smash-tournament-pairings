@@ -1,0 +1,22 @@
+{
+  "name": "tournament-pairings",
+  "version": "1.0.0",
+  "description": "round-robin style pairings for game",
+  "main": "index.js",
+  "scripts": {
+    "test": "python application.py"
+  },
+  "author": "datian zhang",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
+    "bootstrap": "^4.3.1",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
+  }
+}
